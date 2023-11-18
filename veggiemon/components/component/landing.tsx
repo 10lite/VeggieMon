@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Logo from "@/public/logo.jpg"
 
 export default function Landing() {
   return (
@@ -11,9 +12,16 @@ export default function Landing() {
       </header>
       <main className="flex-1">
         <section className="px-8 py-16 bg-green-500 text-white">
-          <h1 className="text-4xl font-bold">Empowering Farmers Through Data</h1>
-          <p className="my-4 text-xl">Make informed planting decisions with real-time market supply-demand data.</p>
-          <Button className="px-6 py-3 text-green-500 bg-white">Get Started</Button>
+          <div className="flex flex-col gap-8 items-center justify-between">
+            <div className="flex-grow flex justify-center">
+              <img src="/logo.jpg" alt="VeggieMon" className="w-64 h-64 rounded-full" />  
+            </div>
+            <div className="flex flex-col text-center">
+              <h1 className="text-4xl font-bold">Empowering Farmers Through Data</h1>
+              <p className="my-4 text-xl">Make informed planting decisions with real-time market supply-demand data.</p>
+            </div>
+            <Button className="px-12 py-4 h-12 rounded-full text-green-500 bg-white">Get Started</Button>
+          </div>
         </section>
         <section className="flex justify-around w-full py-12 md:py-24 lg:py-32 bg-zinc-100 dark:bg-zinc-800">
           <div className="container px-4 md:px-6">
