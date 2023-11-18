@@ -100,7 +100,7 @@ export default function Landing() {
               <p className="mt-4 text-sm font-bold">- Farmer Jane</p>
             </div>
             <div className="p-4 bg-white dark:bg-gray-800 shadow rounded-lg">
-              <p>"I can't imagine going back to the old way of doing things. This app is a game changer."</p>
+              <p>"I can&apos;t imagine going back to the old way of doing things. This app is a game changer."</p>
               <p className="mt-4 text-sm font-bold">- Farmer John</p>
             </div>
             <div className="p-4 bg-white dark:bg-gray-800 shadow rounded-lg">
