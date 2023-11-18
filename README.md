@@ -1,1 +1,1 @@
-# team2k
+# THINK HACKATHON - Team 2K
