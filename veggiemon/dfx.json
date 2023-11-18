@@ -1,0 +1,12 @@
+{
+  "canisters": {
+    "veggiemon": {
+      "frontend": {
+        "entrypoint": "out/index.html"
+      },
+      "sources": ["out"],
+      "type": "assets",
+      "version": "0.15.1"
+    }
+  }
+}
