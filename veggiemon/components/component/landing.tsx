@@ -96,15 +96,15 @@ export default function Landing() {
           <h2 className="text-2xl font-bold text-center">Farmer Testimonials</h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="p-4 bg-white dark:bg-gray-800 shadow rounded-lg">
-              <p>"This app revolutionized how I approach planting. The data insights are incredibly helpful."</p>
+              <p>&quot;This app revolutionized how I approach planting. The data insights are incredibly helpful.&quot;</p>
               <p className="mt-4 text-sm font-bold">- Farmer Jane</p>
             </div>
             <div className="p-4 bg-white dark:bg-gray-800 shadow rounded-lg">
-              <p>"I can&apos;t imagine going back to the old way of doing things. This app is a game changer."</p>
+              <p>&quot;I can&apos;t imagine going back to the old way of doing things. This app is a game changer.&quot;</p>
               <p className="mt-4 text-sm font-bold">- Farmer John</p>
             </div>
             <div className="p-4 bg-white dark:bg-gray-800 shadow rounded-lg">
-              <p>"With VeggieMon, I feel empowered to make the best decisions for my farm."</p>
+              <p>&quot;With VeggieMon, I feel empowered to make the best decisions for my farm.&quot;</p>
               <p className="mt-4 text-sm font-bold">- Farmer Alex</p>
             </div>
           </div>
