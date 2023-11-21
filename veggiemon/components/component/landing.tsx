@@ -5,28 +5,30 @@ import Image from 'next/image'
 export default function Landing() {
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-800">
-      <header className="flex items-center justify-between px-8 py-4 bg-green-500">
-        <span className="text-2xl text-white">VeggieMon</span>
-        <Button className="text-white border-white" variant="outline">
+      <header className="flex items-center justify-between px-8 py-4 bg-green-600">
+        <span className="flex gap-4 text-2xl text-white font-semibold">
+          <Image width={32} height={32} src="/logo.jpg" alt="VeggieMon" className="rounded-full"/> VeggieMon
+        </span>
+        <Button className="text-white border-white hover:text-green-600 hover:bg-white" variant="outline">
           Login
         </Button>
       </header>
       <main className="flex-1">
-        <section className="px-8 py-16 bg-green-500 text-white">
+        <section className="px-8 py-16 text-green-600 bg-white">
           <div className="flex flex-col gap-8 items-center justify-between">
             <div className="flex-grow flex justify-center">
-              <Image src="/logo.jpg" alt="VeggieMon" className="w-64 h-64 rounded-full" />  
+              <Image width={256} height={256} src="/logo.jpg" alt="VeggieMon" className="rounded-full" priority/>  
             </div>
-            <div className="flex flex-col text-center">
+            <div className="flex flex-col text-center text-zinc-800">
               <h1 className="text-4xl font-bold">Empowering Farmers Through Data</h1>
-              <p className="my-4 text-xl">Make informed planting decisions with real-time market supply-demand data.</p>
+              <p className="my-2 text-xl">Make informed planting decisions with <span className="font-semibold text-green-600">real-time market supply-demand data</span>.</p>
             </div>
-            <Button className="px-12 py-4 h-12 rounded-full text-green-500 bg-white">Get Started</Button>
+            <Button className="px-8 py-4 h-12 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold text-lg">Get Started</Button>
           </div>
         </section>
         <section className="flex justify-around w-full py-12 md:py-24 lg:py-32 bg-zinc-100 dark:bg-zinc-800">
           <div className="container px-4 md:px-6">
-            <div className="grid items-center grid-cols-2 gap-8 sm:gap-12 md:grid-cols-3">
+            <div className="flex flex-col lg:grid items-center grid-cols-2 gap-8 sm:gap-12 md:grid-cols-3">
               <div className="flex flex-col items-center text-center">
                 <svg
                   className=" h-12 w-12 text-zinc-800 dark:text-zinc-200"
@@ -44,8 +46,8 @@ export default function Landing() {
                   <line x1="18" x2="18" y1="20" y2="4" />
                   <line x1="6" x2="6" y1="20" y2="16" />
                 </svg>
-                <h3 className="text-xl font-bold mt-4">Real-time Analytics</h3>
-                <p className="text-zinc-500 dark:text-zinc-400 mt-2">Track market trends in real-time.</p>
+                <h2 className="text-xl font-bold mt-4">Real-time Analytics</h2>
+                <p className="text-zinc-500 dark:text-zinc-400 mt-2">Track market trends in real-time through Web3 technologies.</p>
               </div>
               <div className="flex flex-col items-center text-center">
                 <svg
@@ -66,7 +68,7 @@ export default function Landing() {
                   <path d="M12 3v18" />
                   <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" />
                 </svg>
-                <h3 className="text-xl font-bold mt-4">Supply and Demand</h3>
+                <h2 className="text-xl font-bold mt-4">Supply and Demand</h2>
                 <p className="text-zinc-500 dark:text-zinc-400 mt-2">Balance out the supply and demand.</p>
               </div>
               <div className="flex flex-col items-center text-center">
@@ -86,15 +88,15 @@ export default function Landing() {
                   <line x1="2" x2="22" y1="12" y2="12" />
                   <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                 </svg>
-                <h3 className="text-xl font-bold mt-4">Global Market</h3>
+                <h2 className="text-xl font-bold mt-4">Global Market</h2>
                 <p className="text-zinc-500 dark:text-zinc-400 mt-2">Keep an eye on the global market.</p>
               </div>
             </div>
           </div>
         </section>
-        <section className="p-8 space-y-8 bg-gray-100 dark:bg-gray-700">
+        <section className="flex flex-col items-center p-8 space-y-8 bg-gray-100 dark:bg-gray-700">
           <h2 className="text-2xl font-bold text-center">Farmer Testimonials</h2>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-[80%]">
             <div className="p-4 bg-white dark:bg-gray-800 shadow rounded-lg">
               <p>&quot;This app revolutionized how I approach planting. The data insights are incredibly helpful.&quot;</p>
               <p className="mt-4 text-sm font-bold">- Farmer Jane</p>
@@ -110,7 +112,7 @@ export default function Landing() {
           </div>
         </section>
       </main>
-      <footer className="px-8 py-4 text-center text-sm text-gray-700 bg-gray-200 dark:bg-gray-800">
+      <footer className="px-8 py-4 text-center text-sm text-gray-700 dark:text-white bg-gray-200 dark:bg-gray-800">
         © VeggieMon. All rights reserved.
       </footer>
     </div>
