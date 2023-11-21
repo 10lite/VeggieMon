@@ -69,7 +69,7 @@ export default function Landing() {
                   <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" />
                 </svg>
                 <h2 className="text-xl font-bold mt-4">Supply and Demand</h2>
-                <p className="text-zinc-500 dark:text-zinc-400 mt-2">Balance out the supply and demand.</p>
+                <p className="text-zinc-500 dark:text-zinc-400 mt-2">Monitor supply and demand chain of agri-commodities.</p>
               </div>
               <div className="flex flex-col items-center text-center">
                 <svg
