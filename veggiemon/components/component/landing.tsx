@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button"
 import Logo from "@/public/logo.jpg"
 import Image from 'next/image'
+import Link from 'next/link'
+import { BarChart3, FolderKanban, BrainCircuit } from "lucide-react"
 
 export default function Landing() {
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-800">
-      <header className="flex items-center justify-between px-8 py-4 bg-green-600">
+      <header className="flex items-center justify-between px-8 py-4 bg-green-600/40">
         <span className="flex gap-4 text-2xl text-white font-semibold">
           <Image width={32} height={32} src="/logo.jpg" alt="VeggieMon" className="rounded-full"/> VeggieMon
         </span>
@@ -23,78 +25,35 @@ export default function Landing() {
               <h1 className="text-4xl font-bold">Empowering Farmers Through Data</h1>
               <p className="my-2 text-xl">Make informed planting decisions with <span className="font-semibold text-green-600">real-time market supply-demand data</span>.</p>
             </div>
-            <Button className="px-8 py-4 h-12 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold text-lg">Get Started</Button>
+            <Button className="px-8 py-4 h-12 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold text-lg">
+              <Link href='/dashboard'>
+                Get Started
+              </Link>
+            </Button>
           </div>
         </section>
         <section className="flex justify-around w-full py-12 md:py-24 lg:py-32 bg-zinc-100 dark:bg-zinc-800">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col lg:grid items-center grid-cols-2 gap-8 sm:gap-12 md:grid-cols-3">
-              <div className="flex flex-col items-center text-center">
-                <svg
-                  className=" h-12 w-12 text-zinc-800 dark:text-zinc-200"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <line x1="12" x2="12" y1="20" y2="10" />
-                  <line x1="18" x2="18" y1="20" y2="4" />
-                  <line x1="6" x2="6" y1="20" y2="16" />
-                </svg>
-                <h2 className="text-xl font-bold mt-4">Real-time Analytics</h2>
-                <p className="text-zinc-500 dark:text-zinc-400 mt-2">Track market trends in real-time through Web3 technologies.</p>
+              <div className="flex flex-col items-center text-center [&>svg]:w-12 [&>svg]:h-12 text-green-200">
+                <BarChart3 />
+                <h2 className="text-xl font-bold mt-4">Real-time Analytics Dashboard</h2>
+                <p className="text-zinc-400 dark:text-zinc-300 mt-2">VeggieMon offers a real-time monitoring dashboard that enables tracking of crop supply and demand data at every step of the supply chain.</p>
               </div>
-              <div className="flex flex-col items-center text-center">
-                <svg
-                  className=" h-12 w-12 text-zinc-800 dark:text-zinc-200"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
-                  <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
-                  <path d="M7 21h10" />
-                  <path d="M12 3v18" />
-                  <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" />
-                </svg>
-                <h2 className="text-xl font-bold mt-4">Supply and Demand</h2>
-                <p className="text-zinc-500 dark:text-zinc-400 mt-2">Monitor supply and demand chain of agri-commodities.</p>
+              <div className="flex flex-col items-center text-center [&>svg]:w-12 [&>svg]:h-12 text-green-200">
+                <FolderKanban />
+                <h2 className="text-xl font-bold mt-4">Crop Management Platform</h2>
+                <p className="text-zinc-400 dark:text-zinc-300 mt-2">VeggieMon offers farmers related data to the market and supply-demand chain, which gives suggestions for efficient and effective crop management and planning.</p>
               </div>
-              <div className="flex flex-col items-center text-center">
-                <svg
-                  className=" h-12 w-12 text-zinc-800 dark:text-zinc-200"
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <line x1="2" x2="22" y1="12" y2="12" />
-                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                </svg>
-                <h2 className="text-xl font-bold mt-4">Global Market</h2>
-                <p className="text-zinc-500 dark:text-zinc-400 mt-2">Keep an eye on the global market.</p>
+              <div className="flex flex-col items-center text-center [&>svg]:w-12 [&>svg]:h-12 text-green-200">
+                <BrainCircuit />
+                <h2 className="text-xl font-bold mt-4">Blockchain and Satellite Data Integration</h2>
+                <p className="text-zinc-400 dark:text-zinc-300 mt-2">Veggiemon boasts data transparency, providing access to timely and accurate market insights, ultimately reducing price volatility and enabling informed decision-making.</p>
               </div>
             </div>
           </div>
         </section>
-        <section className="flex flex-col items-center p-8 space-y-8 bg-gray-100 dark:bg-gray-700">
+        {/* <section className="flex flex-col items-center p-8 space-y-8 bg-gray-100 dark:bg-gray-700">
           <h2 className="text-2xl font-bold text-center">Farmer Testimonials</h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-[80%]">
             <div className="p-4 bg-white dark:bg-gray-800 shadow rounded-lg">
@@ -110,7 +69,7 @@ export default function Landing() {
               <p className="mt-4 text-sm font-bold">- Farmer Alex</p>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <footer className="px-8 py-4 text-center text-sm text-gray-700 dark:text-white bg-gray-200 dark:bg-gray-800">
         © VeggieMon. All rights reserved.
