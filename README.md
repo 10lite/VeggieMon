@@ -25,6 +25,8 @@ VeggieMon is a supply chain management dashboard powered by Blockchain technolog
 - This is the official submission of Team 2k for [THINK Hackathon](https://lu.ma/thinkhackathon).
 
 ## 🗺️ Product Roadmap
+**⚠️ Disclaimer: VeggieMon is under tedious construction.**
+
 1. 🔗 **Blockchain Integration**
 - A decentralized information system would allow for transparent, accurate, and timely information dissemination on the supply-demand chain.
 
