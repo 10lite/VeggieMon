@@ -4,6 +4,8 @@
 
 VeggieMon, a pioneering agricultural solution, operates as a decentralized app underpinned by Blockchain technology and satellite imagery. Its core functionality revolves around offering farmers a sophisticated supply chain management dashboard. This powerful platform provides real-time analytics, supply and demand insights, and market trends, enabling farmers to strategically optimize crop planning. The project's overarching purpose is to establish a sustainable and transparent ecosystem within the agri-food industry, facilitating data-driven decision-making for farmers. VeggieMon aims to cultivate trust, diminish waste, and champion sustainable farming practices, thereby transforming conventional agricultural approaches. Through technological integration, the platform is poised to significantly enhance efficiency, bolster profitability, and contribute to long-term environmental sustainability, positioning itself as a pivotal player in reshaping the agricultural landscape.
 
+Learn more about VeggieMon [here](https://gamma.app/public/VeggieMon-byv7xw1fiqq2uos?mode=present#card-e9q8jzrjsf3zwkg).
+
 ## 🚀 Introduction
 VeggieMon is a supply chain management dashboard powered by Blockchain technology that leverages satellite imagery to optimize crop selection and yield based on the local and global market demand.
 
@@ -15,7 +17,7 @@ VeggieMon is a supply chain management dashboard powered by Blockchain technolog
 
 **Things to Note:**
 - This project is developed with [Next.js](https://nextjs.org/), [Tailwind](https://tailwindcss.com/), and is deployed to the Internet Computer using [DFX](https://internetcomputer.org/docs/current/references/cli-reference/dfx-parent). 
-- This is the official submission of Team 2k for [THINK Hackathon](https://lu.ma/thinkhackathon). Learn more about VeggieMon [here](https://gamma.app/public/VeggieMon-byv7xw1fiqq2uos?mode=present#card-e9q8jzrjsf3zwkg).
+- This is the official submission of Team 2k for [THINK Hackathon](https://lu.ma/thinkhackathon).
 
 ## ⚙️ Running the project locally
 On any Linux CLI, use the following commands to run the project locally:
