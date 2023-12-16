@@ -19,6 +19,18 @@ VeggieMon is a supply chain management dashboard powered by Blockchain technolog
 - This project is developed with [Next.js](https://nextjs.org/), [Tailwind](https://tailwindcss.com/), and is deployed to the Internet Computer using [DFX](https://internetcomputer.org/docs/current/references/cli-reference/dfx-parent). 
 - This is the official submission of Team 2k for [THINK Hackathon](https://lu.ma/thinkhackathon).
 
+## 🗺️ Product Roadmap
+1. 🔗 **Blockchain Integration**
+- A decentralized information system would allow for transparent, accurate, and timely information dissemination on the supply-demand chain.
+
+2. 📊 **Crop Market Price Analytics Dashboard**
+- A unified dashboard achieved through data scraping market prices from the uploaded data of the Department of Agriculture and the Philippine Statistics Authority 
+
+3. 📄 **Crop Management System for Farmers**
+- Farmers get a better grasp of the supply-demand chain through AI recommendations based on the price dashboard. Decisions on what to plant next are suggested.
+
+4. 🛰️ **Integration of Satellite Data & Machine Learning for Automated Geo-mapping of Supply-Demand Chain**
+
 ## ⚙️ Running the project locally
 On any Linux CLI, use the following commands to run the project locally:
 
