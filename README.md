@@ -1,3 +1,5 @@
+![alt text](https://imgur.com/xHFYFzc.png)
+
 # 🍃 VeggieMon
 
 VeggieMon, a pioneering agricultural solution, operates as a decentralized app underpinned by Blockchain technology and satellite imagery. Its core functionality revolves around offering farmers a sophisticated supply chain management dashboard. This powerful platform provides real-time analytics, supply and demand insights, and market trends, enabling farmers to strategically optimize crop planning. The project's overarching purpose is to establish a sustainable and transparent ecosystem within the agri-food industry, facilitating data-driven decision-making for farmers. VeggieMon aims to cultivate trust, diminish waste, and champion sustainable farming practices, thereby transforming conventional agricultural approaches. Through technological integration, the platform is poised to significantly enhance efficiency, bolster profitability, and contribute to long-term environmental sustainability, positioning itself as a pivotal player in reshaping the agricultural landscape.
