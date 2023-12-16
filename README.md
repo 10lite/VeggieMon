@@ -6,6 +6,11 @@ VeggieMon, a pioneering agricultural solution, operates as a decentralized app u
 
 Learn more about VeggieMon [here](https://gamma.app/public/VeggieMon-byv7xw1fiqq2uos?mode=present#card-e9q8jzrjsf3zwkg).
 
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![MIT License](https://img.shields.io/badge/Made_with-Web3.0-green)](https://choosealicense.com/licenses/mit/) [![AGPL License](https://img.shields.io/badge/Made_with-Internet_Computer-blue)](http://www.gnu.org/licenses/agpl-3.0) 
+
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+
 ## 🚀 Introduction
 VeggieMon is a supply chain management dashboard powered by Blockchain technology that leverages satellite imagery to optimize crop selection and yield based on the local and global market demand.
 
