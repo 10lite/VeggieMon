@@ -10,49 +10,39 @@ import { CardDescription, CardTitle, CardHeader, CardContent, Card } from "@/com
 import { ResponsiveBar } from "@nivo/bar"
 import { ResponsiveLine } from "@nivo/line"
 import Image from 'next/image'
-import { Info } from "lucide-react"
+import { Package } from "lucide-react"
+import { JSX, ClassAttributes, HTMLAttributes } from "react"
 
 export function Dashboard() {
   return (
     <div className="grid h-screen min-h-screen w-full lg:grid-cols-[280px_1fr]">
-      <div className="hidden border-r bg-gray-100/40 lg:block dark:bg-green-600/40">
+      <div className="border-r bg-gray-100/40 md:block dark:bg-green-600/40">
         <div className="flex h-full max-h-screen flex-col gap-2">
           <div className="flex h-[60px] items-center border-b px-6">
             <Link className="flex items-center gap-2 font-semibold" href="#">
               <Image width={32} height={32} src="/logo.jpg" alt="VeggieMon" className="rounded-full" priority/>  
               <span className="">VeggieMon</span>
             </Link>
-            <Button className="ml-auto h-8 w-8" size="icon" variant="outline">
-              <BellIcon className="h-4 w-4" />
-              <span className="sr-only">Toggle notifications</span>
-            </Button>
           </div>
           <div className="flex-1 overflow-auto py-2">
-            <nav className="grid items-start px-4 text-sm font-medium">
+            <nav className="grid items-start gap-2 px-4 text-lg font-medium text-[#FEF5E7]">
               <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-[#FEF5E7] hover:bg-green-200 hover:text-[#315830] transition-all"
                 href="/"
               >
                 <HomeIcon className="h-4 w-4" />
                 Home
               </Link>
               <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                href="#"
-              >
-                <Info className="h-4 w-4" />
-                About
-              </Link>
-              <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-[#FEF5E7] hover:bg-green-200 hover:text-[#315830] transition-all"
                 href="/manage"
               >
-                <PackageIcon className="h-4 w-4" />
+                <Package className="h-4 w-4" />
                 Manage
               </Link>
               <Link
-                className="flex items-center gap-3 rounded-lg bg-gray-100 px-3 py-2 text-gray-900  transition-all hover:text-gray-900 dark:bg-green-600 dark:text-gray-50 dark:hover:text-gray-50"
-                href="#"
+                className="flex items-center gap-3 rounded-lg  px-3 py-2 text-zinc-800 transition-all hover:text-[#315830] bg-green-200 "
+                href="/dashboard"
               >
                 <LineChartIcon className="h-4 w-4" />
                 Analytics
@@ -61,8 +51,8 @@ export function Dashboard() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col">
-        <header className="flex h-14 items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
+      <div className="flex flex-col ">
+        <header className="flex h-14 items-center gap-4 border-b  px-6 bg-zinc-800">
           <Link className="lg:hidden" href="#">
             <Package2Icon className="h-6 w-6" />
             <span className="sr-only">Home</span>
@@ -72,7 +62,7 @@ export function Dashboard() {
               <div className="relative">
                 <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-500 dark:text-gray-400" />
                 <Input
-                  className="w-full bg-white shadow-none appearance-none pl-8 md:w-2/3 lg:w-1/3 dark:bg-gray-950"
+                  className="w-full  shadow-none appearance-none pl-8 md:w-2/3 lg:w-1/3 bg-gray-950"
                   placeholder="Search"
                   type="search"
                 />
@@ -90,7 +80,7 @@ export function Dashboard() {
                   alt="Avatar"
                   className="rounded-full"
                   height="32"
-                  src="/placeholder.svg"
+                  src="/logo.jpg"
                   style={{
                     aspectRatio: "32/32",
                     objectFit: "cover",
@@ -100,7 +90,7 @@ export function Dashboard() {
                 <span className="sr-only">Toggle user menu</span>
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent align="end" className="bg-zinc-800">
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem>Settings</DropdownMenuItem>
@@ -110,66 +100,87 @@ export function Dashboard() {
             </DropdownMenuContent>
           </DropdownMenu>
         </header>
-        <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
+        <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6 bg-[#FEF5E7] text-black">
           <div className="flex items-center gap-4">
-            <Button size="icon" variant="outline">
-              <ArrowLeftIcon className="h-4 w-4" />
-              <span className="sr-only">Back</span>
+            <Button size="icon" variant="outline" className="border-zinc-800 hover:bg-[#FACE8A]">
+              <Link href="/">
+                <ArrowLeftIcon className="h-4 w-4" />
+                <span className="sr-only">Back</span>
+              </Link>
             </Button>
             <h1 className="font-semibold text-lg md:text-xl">Crop Market Analytics</h1>
             <div className="ml-auto flex items-center gap-2">
-              <Button className="hidden sm:flex" variant="outline">
+              <Button className="hidden sm:flex border-zinc-800" variant="outline">
                 Today
               </Button>
-              <Button className="hidden md:flex" variant="outline">
+              <Button className="hidden md:flex border-zinc-800" variant="outline">
                 This Month
               </Button>
               <Popover>
                 <PopoverTrigger asChild>
-                  <Button className="w-[280px] justify-start text-left font-normal" id="date" variant="outline">
+                  <Button className="w-[280px] justify-start text-left font-normal border-zinc-800" id="date" variant="outline">
                     <CalendarClockIcon className="mr-2 h-4 w-4" />
                     Nov 01, 2023 - Nov 30, 2023
                   </Button>
                 </PopoverTrigger>
-                <PopoverContent align="end" className="w-auto p-0">
+                <PopoverContent align="end" className="w-auto p-0  bg-zinc-800">
                   <Calendar initialFocus mode="range" numberOfMonths={2} />
                 </PopoverContent>
               </Popover>
             </div>
           </div>
           <div className="grid gap-6">
-            <Card className="flex flex-col">
+            <div className="flex flex-col lg:flex-row gap-4">
+              <Card className="flex grow flex-col border-zinc-800">
                 <CardHeader>
-                  <CardDescription>Top Selling Crops</CardDescription>
+                  <CardDescription className="text-2xl font-bold text-[#315830]">Top Selling Crops</CardDescription>
                 </CardHeader>
                 <CardContent className="grid gap-4">
                   <div className="flex items-center">
-                    <div>Rice</div>
+                    <div className="text-xl font-semibold">Rice</div>
                     <div className="font-semibold ml-auto">3K</div>
                   </div>
                   <div className="flex items-center">
-                    <div>Coconut</div>
+                    <div className="text-xl font-semibold">Coconut</div>
                     <div className="font-semibold ml-auto">1.2K</div>
                   </div>
                   <div className="flex items-center">
-                    <div>Corn</div>
+                    <div className="text-xl font-semibold">Corn</div>
                     <div className="font-semibold ml-auto">1.1K</div>
                   </div>
                 </CardContent>
               </Card>
-            <Card className="flex flex-col">
+              <Card className="flex grow flex-col border-zinc-800">
+                <CardHeader>
+                  <CardDescription className="text-2xl font-bold text-red-500">Worst Selling Crops</CardDescription>
+                </CardHeader>
+                <CardContent className="grid gap-4">
+                  <div className="flex items-center">
+                    <div className="text-xl font-semibold">Cabbage</div>
+                    <div className="font-semibold ml-auto">0.1K</div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="text-xl font-semibold">Carrot</div>
+                    <div className="font-semibold ml-auto">0.2K</div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="text-xl font-semibold">Cucumber</div>
+                    <div className="font-semibold ml-auto">0.3K</div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            <Card className="flex flex-col border-zinc-800">
               <CardHeader>
-                <CardDescription>Total Sales</CardDescription>
-                <CardTitle>₱2389.00</CardTitle>
+                <CardDescription className="text-2xl font-bold text-[#315830]">Price Chart of Rice</CardDescription>
               </CardHeader>
               <CardContent>
                 <BarChart className="w-full aspect-[2/1]" />
               </CardContent>
             </Card>
-            <Card className="flex flex-col">
+            <Card className="flex flex-col border-zinc-800">
               <CardHeader>
-                <CardDescription>Average Prices</CardDescription>
-                <CardTitle>₱345.00</CardTitle>
+                <CardDescription className="text-2xl font-bold text-[#315830]">Average Prices</CardDescription>
               </CardHeader>
               <CardContent>
                 <CurvedlineChart className="w-full aspect-[3/2]" />
@@ -184,7 +195,7 @@ export function Dashboard() {
 }
 
 
-function PlaneIcon(props) {
+function PlaneIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -203,29 +214,7 @@ function PlaneIcon(props) {
   )
 }
 
-
-function BellIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
-      <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
-    </svg>
-  )
-}
-
-
-function HomeIcon(props) {
+function HomeIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -245,101 +234,7 @@ function HomeIcon(props) {
   )
 }
 
-
-function ShoppingCartIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <circle cx="8" cy="21" r="1" />
-      <circle cx="19" cy="21" r="1" />
-      <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
-    </svg>
-  )
-}
-
-
-function PackageIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m7.5 4.27 9 5.15" />
-      <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
-      <path d="m3.3 7 8.7 5 8.7-5" />
-      <path d="M12 22V12" />
-    </svg>
-  )
-}
-
-
-function UsersIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-      <circle cx="9" cy="7" r="4" />
-      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-    </svg>
-  )
-}
-
-
-function LandmarkIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="3" x2="21" y1="22" y2="22" />
-      <line x1="6" x2="6" y1="18" y2="11" />
-      <line x1="10" x2="10" y1="18" y2="11" />
-      <line x1="14" x2="14" y1="18" y2="11" />
-      <line x1="18" x2="18" y1="18" y2="11" />
-      <polygon points="12 2 20 7 4 7" />
-    </svg>
-  )
-}
-
-
-function LineChartIcon(props) {
+function LineChartIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -360,7 +255,7 @@ function LineChartIcon(props) {
 }
 
 
-function Package2Icon(props) {
+function Package2Icon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -382,7 +277,7 @@ function Package2Icon(props) {
 }
 
 
-function SearchIcon(props) {
+function SearchIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -403,7 +298,7 @@ function SearchIcon(props) {
 }
 
 
-function ArrowLeftIcon(props) {
+function ArrowLeftIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -424,7 +319,7 @@ function ArrowLeftIcon(props) {
 }
 
 
-function CalendarClockIcon(props) {
+function CalendarClockIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -449,41 +344,41 @@ function CalendarClockIcon(props) {
 }
 
 
-function BarChart(props) {
+function BarChart(props: JSX.IntrinsicAttributes & ClassAttributes<HTMLDivElement> & HTMLAttributes<HTMLDivElement>) {
   return (
     <div {...props}>
       <ResponsiveBar
         data={[
           {
-            name: "A",
+            name: "January",
             data: 111,
           },
           {
-            name: "B",
+            name: "February",
             data: 157,
           },
           {
-            name: "C",
+            name: "March",
             data: 129,
           },
           {
-            name: "D",
+            name: "April;",
             data: 187,
           },
           {
-            name: "E",
+            name: "May",
             data: 119,
           },
           {
-            name: "F",
+            name: "June",
             data: 22,
           },
           {
-            name: "G",
+            name: "July",
             data: 101,
           },
           {
-            name: "H",
+            name: "August",
             data: 83,
           },
         ]}
@@ -505,7 +400,7 @@ function BarChart(props) {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "Name",
+          legend: "Month",
           legendPosition: "middle",
           legendOffset: 45,
           truncateTickAt: 0,
@@ -514,7 +409,7 @@ function BarChart(props) {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "Number",
+          legend: "Price",
           legendPosition: "middle",
           legendOffset: -45,
           truncateTickAt: 0,
@@ -536,7 +431,7 @@ function BarChart(props) {
 }
 
 
-function CurvedlineChart(props) {
+function CurvedlineChart(props: JSX.IntrinsicAttributes & ClassAttributes<HTMLDivElement> & HTMLAttributes<HTMLDivElement>) {
   return (
     <div {...props}>
       <ResponsiveLine
